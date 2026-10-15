@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фотограф в Атырау — Данияр | Дони и К</title>
+<meta name="description" content="Фотограф Данияр, 20 лет опыта. Свадьбы, love story, семейные и портретные съёмки в Атырау. Запишитесь на съёмку.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Фотограф в Атырау — Данияр | Дони и К">
+<meta property="og:description" content="Всё будет, но не сразу. 20 лет за камерой. Свадьбы, love story, семьи, портреты.">
+<meta property="og:image" content="images/og-cover.webp">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#111110">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@600;800&display=swap&subset=cyrillic" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Дони и К — фотограф Данияр",
+  "description": "Фотограф в Атырау, 20 лет опыта. Свадьбы, love story, семейные, портретные съёмки и мероприятия.",
+  "image": "images/og-cover.webp",
+  "telephone": "+7XXXXXXXXXX",
+  "address": { "@type": "PostalAddress", "addressLocality": "Атырау", "addressCountry": "KZ" },
+  "areaServed": "Атырауская область",
+  "founder": { "@type": "Person", "name": "Данияр" }
+}
+</script>
+<style>
+  :root {
+    --bg: #111110;
+    --surface: #1A1918;
+    --surface-2: #171615;
+    --border: #2A2926;
+    --text: #EDEAE4;
+    --text-muted: #A8A49C;
+    --accent: #E8A33D;
+    --on-accent: #111110;
+    --radius: 20px;
+    --gutter: 20px;
+    --font-head: "Unbounded", system-ui, sans-serif;
+    --font-body: "Manrope", system-ui, sans-serif;
+  }
+  @media (min-width: 640px) { :root { --gutter: 32px; } }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.6 var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--font-head); font-weight: 800; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+  h3 { font-weight: 600; font-size: 1.15rem; line-height: 1.3; }
+  p { margin: 0; }
+  .accent { color: var(--accent); }
+  .muted { color: var(--text-muted); }
+
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; left: -9999px; top: 8px; background: var(--accent); color: var(--on-accent); padding: 10px 16px; border-radius: 999px; z-index: 100; }
+  .skip:focus { left: 8px; }
+
+  .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 var(--gutter); }
+  section { padding: 88px 0; }
+  @media (min-width: 1024px) { section { padding: 120px 0; } }
+  .eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .section-head { margin-bottom: 48px; max-width: 720px; }
+  .section-head p { margin-top: 16px; color: var(--text-muted); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 48px; padding: 0 26px; border-radius: 999px;
+    font: 700 16px/1 var(--font-body); text-decoration: none; cursor: pointer;
+    border: 2px solid transparent; transition: transform .2s, background .2s, color .2s, border-color .2s;
+  }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: #F2B456; transform: translateY(-2px); }
+  .btn-outline { border-color: var(--border); color: var(--text); background: transparent; }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { min-height: 44px; padding: 0 18px; font-size: 15px; }
+
+  /* Header */
+  .header {
+    position: sticky; top: 0; z-index: 50;
+    transition: background .3s, border-color .3s, backdrop-filter .3s;
+    border-bottom: 1px solid transparent;
+  }
+  .header.scrolled { background: rgba(17,17,16,.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--border); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px; }
+  .logo { font-family: var(--font-head); font-weight: 800; font-size: 1.25rem; text-decoration: none; letter-spacing: 0.02em; white-space: nowrap; }
+  .nav { display: none; }
+  .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 32px; }
+  .nav a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color .2s; }
+  .nav a:hover { color: var(--text); }
+  .header-actions { display: flex; align-items: center; gap: 8px; }
+  .burger { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: transparent; color: var(--text); cursor: pointer; display: grid; place-items: center; }
+  .burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; position: relative; transition: transform .25s, opacity .25s; }
+  .burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+  .burger span::before { top: -6px; } .burger span::after { top: 6px; }
+  .burger[aria-expanded="true"] span { background: transparent; }
+  .burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+  .burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+  .mobile-menu { display: none; border-top: 1px solid var(--border); background: rgba(17,17,16,.97); }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 8px var(--gutter) 20px; }
+  .mobile-menu a { display: block; padding: 14px 0; font-weight: 700; font-size: 1.1rem; text-decoration: none; border-bottom: 1px solid var(--border); }
+  @media (min-width: 1024px) {
+    .nav { display: block; }
+    .burger, .mobile-menu { display: none !important; }
+  }
+
+  /* Hero */
+  .hero { padding: 40px 0 88px; position: relative; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -20% -10% auto auto; width: 70vw; height: 70vw; max-width: 900px; max-height: 900px;
+    background: radial-gradient(circle, rgba(232,163,61,.16), transparent 62%); pointer-events: none;
+  }
+  .hero-grid { display: grid; gap: 48px; align-items: center; position: relative; }
+  .hero-kicker { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 28px; }
+  .hero-lead { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 10px; font-weight: 500; }
+  .hero h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; }
+  .hero-sub { margin-top: 24px; font-size: 1.1rem; max-width: 520px; color: var(--text-muted); }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .hero-photo { position: relative; }
+  .hero-photo .ph { aspect-ratio: 4 / 5; border-radius: var(--radius); align-items: flex-start; justify-content: flex-end; }
+  .hero-badge {
+    position: absolute; left: -12px; bottom: 28px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 14px 18px; display: flex; align-items: center; gap: 12px; box-shadow: 0 20px 40px rgba(0,0,0,.4);
+  }
+  .hero-badge b { font-family: var(--font-head); font-size: 1.8rem; color: var(--accent); line-height: 1; }
+  .hero-badge span { font-size: 0.85rem; line-height: 1.3; color: var(--text-muted); }
+  @media (min-width: 1024px) {
+    .hero { padding: 64px 0 120px; }
+    .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 64px; }
+    .hero-badge { left: -40px; }
+  }
+
+  /* Photo placeholder */
+  .ph {
+    position: relative; overflow: hidden; background: var(--surface);
+    display: flex; align-items: flex-end; justify-content: flex-start;
+  }
+  .ph::before { content: ""; position: absolute; inset: 0; background: var(--g); }
+  .ph::after {
+    content: ""; position: absolute; inset: 0; opacity: .22; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .ph svg.cam { position: absolute; top: 50%; left: 50%; width: 56px; height: 56px; transform: translate(-50%, -50%); opacity: .35; z-index: 1; }
+  .ph-label { position: relative; z-index: 2; margin: 16px; padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; background: rgba(17,17,16,.7); backdrop-filter: blur(6px); }
+
+  /* About */
+  .about-grid { display: grid; gap: 40px; }
+  .about-text p + p { margin-top: 18px; }
+  .about-text p { font-size: 1.1rem; }
+  .quote { margin-top: 28px; padding-left: 20px; border-left: 3px solid var(--accent); font-family: var(--font-head); font-weight: 600; font-size: 1.2rem; line-height: 1.4; }
+  .about-cards { display: grid; gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+  .stat-num { font-family: var(--font-head); font-weight: 800; font-size: clamp(4.5rem, 10vw, 7rem); line-height: 1; color: var(--accent); }
+  .stat-label { margin-top: 10px; color: var(--text-muted); font-size: 1.05rem; }
+  .card-funny h3 { margin-bottom: 12px; }
+  .card-funny p { font-size: 1.1rem; }
+  .card-funny .wink { display: inline-block; margin-top: 16px; font-size: 1.6rem; }
+  @media (min-width: 1024px) {
+    .about-grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start; }
+  }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .about-cards { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* Services */
+  .services-grid { display: grid; gap: 16px; }
+  @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+  .service { display: flex; flex-direction: column; gap: 12px; transition: border-color .25s, transform .25s; }
+  .service:hover { border-color: rgba(232,163,61,.5); transform: translateY(-4px); }
+  .service-icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: rgba(232,163,61,.12); color: var(--accent); margin-bottom: 8px; }
+  .service p { color: var(--text-muted); flex: 1; }
+  .price { margin-top: 12px; padding-top: 16px; border-top: 1px solid var(--border); font-weight: 700; display: flex; justify-content: space-between; align-items: baseline; }
+  .price span:first-child { color: var(--text-muted); font-weight: 500; font-size: .9rem; }
+
+  /* Portfolio */
+  .portfolio-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid button { padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 16px; overflow: hidden; display: block; width: 100%; }
+  .portfolio-grid .ph { aspect-ratio: 4 / 5; border-radius: 16px; transition: transform .5s; }
+  .portfolio-grid button:hover .ph { transform: scale(1.04); }
+  @media (min-width: 1024px) {
+    .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .portfolio-grid li:nth-child(1) .ph, .portfolio-grid li:nth-child(5) .ph { aspect-ratio: 4 / 5; }
+  }
+  .portfolio-grid { list-style: none; margin: 0; padding: 0; }
+  .more-link { display: inline-flex; margin-top: 32px; font-weight: 700; color: var(--accent); text-decoration: none; gap: 8px; }
+  .more-link:hover { text-decoration: underline; }
+
+  /* Lightbox */
+  .lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(8,8,8,.96); display: none; align-items: center; justify-content: center; padding: 64px 16px; }
+  .lightbox.open { display: flex; }
+  .lightbox-stage { width: min(92vw, 640px); }
+  .lightbox-stage .ph { aspect-ratio: 4 / 5; border-radius: 16px; max-height: 78vh; margin: 0 auto; }
+  .lightbox-caption { text-align: center; margin-top: 14px; color: var(--text-muted); font-size: .95rem; }
+  .lb-btn { position: absolute; width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.08); border: 1px solid var(--border); color: var(--text); cursor: pointer; display: grid; place-items: center; font-size: 22px; }
+  .lb-btn:hover { background: var(--accent); color: var(--on-accent); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  @media (max-width: 639px) { .lb-prev, .lb-next { top: auto; bottom: 16px; transform: none; } .lb-prev { left: calc(50% - 60px); } .lb-next { right: calc(50% - 60px); } }
+
+  /* Booking */
+  .booking { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .booking-grid { display: grid; gap: 40px; }
+  @media (min-width: 1024px) { .booking-grid { grid-template-columns: 0.9fr 1.1fr; gap: 64px; } }
+  .booking-intro p { margin-top: 20px; color: var(--text-muted); font-size: 1.1rem; }
+  .booking-steps { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 14px; }
+  .booking-steps li { display: flex; gap: 14px; align-items: center; }
+  .booking-steps b { width: 36px; height: 36px; flex: none; border-radius: 50%; border: 1px solid var(--accent); color: var(--accent); display: grid; place-items: center; font-family: var(--font-head); font-size: .9rem; }
+  form { display: grid; gap: 18px; }
+  .row-2 { display: grid; gap: 18px; }
+  @media (min-width: 640px) { .row-2 { grid-template-columns: 1fr 1fr; } }
+  .field label { display: block; font-weight: 700; font-size: .95rem; margin-bottom: 8px; }
+  .field label .req { color: var(--accent); }
+  .field input, .field select, .field textarea {
+    width: 100%; min-height: 52px; padding: 12px 16px; border-radius: 14px;
+    background: var(--bg); border: 1px solid var(--border); color: var(--text);
+    font: 500 16px/1.4 var(--font-body); transition: border-color .2s;
+  }
+  .field textarea { min-height: 120px; resize: vertical; }
+  .field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A8A49C' stroke-width='2'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+  .field input[type="date"] { color-scheme: dark; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,163,61,.25); }
+  .field.invalid input, .field.invalid select { border-color: #E5664F; }
+  .error { display: none; margin-top: 6px; color: #F08A75; font-size: .9rem; font-weight: 500; }
+  .field.invalid .error { display: block; }
+  .form-note { font-size: .85rem; color: var(--text-muted); }
+  .success { display: none; text-align: center; padding: 48px 28px; }
+  .success.show { display: block; }
+  .success-icon { width: 72px; height: 72px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; margin: 0 auto 20px; font-size: 32px; }
+  .success h3 { font-size: 1.5rem; margin-bottom: 10px; }
+
+  /* Contacts */
+  .contacts-grid { display: grid; gap: 16px; }
+  @media (min-width: 640px) { .contacts-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .contacts-grid { grid-template-columns: repeat(4, 1fr); } }
+  .contact { display: flex; flex-direction: column; gap: 16px; text-decoration: none; transition: border-color .25s, transform .25s; }
+  .contact:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .contact .service-icon { margin: 0; }
+  .contact small { color: var(--text-muted); font-size: .85rem; display: block; margin-bottom: 2px; }
+  .contact strong { font-size: 1.05rem; word-break: break-word; }
+  .contacts-note { margin-top: 28px; color: var(--text-muted); }
+
+  /* Footer */
+  .footer { border-top: 1px solid var(--border); padding: 48px 0 110px; }
+  @media (min-width: 1024px) { .footer { padding-bottom: 48px; } }
+  .footer-inner { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+  @media (min-width: 640px) { .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; } }
+  .footer-slogan { font-family: var(--font-head); font-weight: 600; }
+  .footer small { color: var(--text-muted); font-size: .9rem; }
+
+  /* Floating WhatsApp */
+  .fab {
+    position: fixed; right: 16px; bottom: 16px; z-index: 60; width: 60px; height: 60px; border-radius: 50%;
+    background: #25D366; color: #fff; display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0,0,0,.45);
+    transition: transform .2s;
+  }
+  .fab:hover { transform: scale(1.06); }
+  @media (min-width: 1024px) { .fab { display: none; } }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; }
+  }
+
+  @media (max-width: 400px) {
+    .header .btn-sm { padding: 0 14px; font-size: 14px; }
+    .logo { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="Дони и К — на главную">ДОНИ <span class="accent">и К</span></a>
+    <nav class="nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="#booking" class="btn btn-primary btn-sm">Записаться</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#portfolio">Портфолио</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <p class="hero-kicker">Фотограф · Атырау · 20 лет за камерой</p>
+        <p class="hero-lead">Запомни одну фразу:</p>
+        <h1>Всё будет, но&nbsp;не <span class="accent">сразу</span>.</h1>
+        <p class="hero-sub">Меня зовут Данияр. Я снимаю людей так, чтобы через годы хотелось пересматривать каждый кадр.</p>
+        <div class="hero-ctas">
+          <a href="#booking" class="btn btn-primary">Записаться на съёмку</a>
+          <a href="#contacts" class="btn btn-outline">Связаться</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- Заменить на: <img src="images/daniyar.webp" width="800" height="1000" alt="Фотограф Данияр с камерой"> -->
+        <div class="ph" role="img" aria-label="Портрет фотографа Данияра с камерой" style="--g: radial-gradient(ellipse at 30% 25%, #E8A33D55, transparent 55%), linear-gradient(160deg, #3a2a18 0%, #1d1712 55%, #0d0c0b 100%);">
+          <svg class="cam" viewBox="0 0 24 24" fill="none" stroke="#EDEAE4" stroke-width="1.5" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L17 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="4"/></svg>
+          <span class="ph-label">Фото Данияра</span>
+        </div>
+        <div class="hero-badge" aria-hidden="true"><b>20</b><span>лет<br>за камерой</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <p class="eyebrow">Обо мне</p>
+        <h2>Двадцать лет учусь ждать правильный кадр</h2>
+        <p style="margin-top:28px">Уже 20 лет я снимаю свадьбы, семьи, портреты и праздники в Атырау. За это время понял главное: хорошая фотография — это терпение. Нужно дождаться света, взгляда, того самого момента, когда человек перестаёт «позировать» и становится собой.</p>
+        <p>Отсюда и моя фраза. Красивые кадры будут — но не сразу. Сначала мы познакомимся, поговорим, посмеёмся. А потом камера сделает своё дело.</p>
+        <p class="quote">«Всё будет, но не сразу.»</p>
+      </div>
+      <div class="about-cards">
+        <div class="card reveal">
+          <div class="stat-num">20</div>
+          <p class="stat-label">лет опыта в фотографии</p>
+        </div>
+        <div class="card card-funny reveal">
+          <h3>Чем я отличаюсь?</h3>
+          <p>Честно? <span class="accent"><b>Я красавчик.</b></span> А ещё умею сделать красивыми всех, кто стоит перед камерой.</p>
+          <span class="wink" aria-hidden="true">😎</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Услуги</p>
+        <h2>Что снимаю</h2>
+        <p>От свадьбы до портрета для резюме. Цены — ориентировочные, точную стоимость обсудим под вашу задачу.</p>
+      </div>
+      <div class="services-grid">
+        <article class="card service reveal">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/><path d="M10 4l2 3 2-3"/></svg></div>
+          <h3>Свадебная съёмка</h3>
+          <p>Сборы, церемония, прогулка, банкет</p>
+          <div class="price"><span>от</span><span>[ЦЕНА] ₸</span></div>
+        </article>
+        <article class="card service reveal">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+          <h3>Love story</h3>
+          <p>Прогулочная съёмка для двоих</p>
+          <div class="price"><span>от</span><span>[ЦЕНА] ₸</span></div>
+        </article>
+        <article class="card service reveal">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M2 21v-2a5 5 0 0 1 10 0v2M14 21v-1a3 3 0 0 1 6 0v1"/></svg></div>
+          <h3>Семейная и детская</h3>
+          <p>Живые кадры всей семьи</p>
+          <div class="price"><span>от</span><span>[ЦЕНА] ₸</span></div>
+        </article>
+        <article class="card service reveal">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+          <h3>Портрет</h3>
+          <p>Для себя, соцсетей или резюме</p>
+          <div class="price"><span>от</span><span>[ЦЕНА] ₸</span></div>
+        </article>
+        <article class="card service reveal">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5.8 11.3L2 22l10.7-3.8M4 3h.01M22 8h.01M15 2h.01M22 20h.01M22 2l-2.2.8a3 3 0 0 0-1.8 3.8v0a3 3 0 0 1-1.8 3.8L14 11"/><path d="M8.6 9.4l6 6"/></svg></div>
+          <h3>Мероприятия</h3>
+          <p>Дни рождения, юбилеи, корпоративы</p>
+          <div class="price"><span>от</span><span>[ЦЕНА] ₸</span></div>
+        </article>
+        <article class="card service reveal">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
+          <h3>Своя идея</h3>
+          <p>Необычная задумка — придумаем вместе</p>
+          <div class="price"><span>цена</span><span>по договорённости</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Портфолио</p>
+        <h2>Кадры, ради которых стоило подождать</h2>
+      </div>
+      <ul class="portfolio-grid" id="portfolio-grid"></ul>
+      <a class="more-link" href="https://instagram.com/[ник]" target="_blank" rel="noopener">Больше работ в Instagram →</a>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking" id="booking">
+    <div class="container booking-grid">
+      <div class="booking-intro reveal">
+        <p class="eyebrow">Запись</p>
+        <h2>Записаться на съёмку</h2>
+        <p>Оставьте заявку — я перезвоню, обсудим идею, место и дату. Всё будет, но не сразу: хорошие даты разбирают заранее.</p>
+        <ol class="booking-steps">
+          <li><b>1</b><span>Вы оставляете заявку</span></li>
+          <li><b>2</b><span>Я перезваниваю и обсуждаем детали</span></li>
+          <li><b>3</b><span>Снимаем — и вы получаете кадры на годы</span></li>
+        </ol>
+      </div>
+      <div class="card reveal">
+        <form id="booking-form" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label for="f-name">Имя <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <p class="error" id="e-name">Пожалуйста, укажите имя</p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Телефон <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required aria-describedby="e-phone">
+              <p class="error" id="e-phone">Введите номер полностью: +7 7XX XXX XX XX</p>
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="field">
+              <label for="f-type">Вид съёмки <span class="req" aria-hidden="true">*</span></label>
+              <select id="f-type" name="type" required aria-describedby="e-type">
+                <option value="">Выберите…</option>
+                <option>Свадьба</option>
+                <option>Love story</option>
+                <option>Семейная / детская</option>
+                <option>Портрет</option>
+                <option>Мероприятие</option>
+                <option>Другое</option>
+              </select>
+              <p class="error" id="e-type">Выберите вид съёмки</p>
+            </div>
+            <div class="field">
+              <label for="f-date">Желаемая дата</label>
+              <input id="f-date" name="date" type="date">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-comment">Комментарий</label>
+            <textarea id="f-comment" name="comment" placeholder="Расскажите об идее, месте, количестве людей…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Оставить заявку</button>
+          <p class="form-note">Поля со звёздочкой обязательны.</p>
+        </form>
+        <div class="success" id="success" role="status" aria-live="polite">
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h3>Заявка отправлена!</h3>
+          <p class="muted">Спасибо, Данияр свяжется с вами в ближайшее время.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Контакты</p>
+        <h2>Связаться в одно касание</h2>
+      </div>
+      <div class="contacts-grid">
+        <a class="card contact reveal" href="tel:+7XXXXXXXXXX">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <div><small>Телефон</small><strong>[ВАШ ТЕЛЕФОН]</strong></div>
+        </a>
+        <a class="card contact reveal" href="https://wa.me/7XXXXXXXXXX" target="_blank" rel="noopener">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.3A11.8 11.8 0 0 0 1.7 17.7L0 24l6.4-1.7A11.8 11.8 0 0 0 23.8 12c0-3.2-1.2-6.2-3.4-8.5z"/></svg></div>
+          <div><small>WhatsApp</small><strong>Написать в WhatsApp</strong></div>
+        </a>
+        <a class="card contact reveal" href="https://t.me/[ник]" target="_blank" rel="noopener">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3l-3.3 15.4c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.3 1.1 11.8c-1.1-.3-1.1-1.1.2-1.6L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg></div>
+          <div><small>Telegram</small><strong>@[ник]</strong></div>
+        </a>
+        <a class="card contact reveal" href="https://instagram.com/[ник]" target="_blank" rel="noopener">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+          <div><small>Instagram</small><strong>@[ник]</strong></div>
+        </a>
+      </div>
+      <p class="contacts-note">Работаю в Атырау и области. Выезд в другие города — по договорённости.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <small>© <span id="year">2026</span> Дони и К — фотограф Данияр, Атырау</small>
+    <p class="footer-slogan">Всё будет, но не <span class="accent">сразу</span>.</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/7XXXXXXXXXX" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.3A11.8 11.8 0 0 0 1.7 17.7L0 24l6.4-1.7A11.8 11.8 0 0 0 23.8 12c0-3.2-1.2-6.2-3.4-8.5z"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Закрыть">✕</button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Предыдущее фото">←</button>
+  <div class="lightbox-stage" id="lb-stage"></div>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Следующее фото">→</button>
+</div>
+
+<script>
+(function () {
+  // Портфолио: заменить gradient на реальные фото (images/*.webp)
+  var works = [
+    { cat: "Свадьба", g: "radial-gradient(ellipse at 70% 20%, #E8A33D66, transparent 55%), linear-gradient(170deg, #4a3520, #1a130d 70%)" },
+    { cat: "Love story", g: "radial-gradient(ellipse at 20% 80%, #d97a5a66, transparent 55%), linear-gradient(200deg, #3b2230, #140f12 70%)" },
+    { cat: "Портрет", g: "radial-gradient(ellipse at 50% 30%, #c9b79c55, transparent 50%), linear-gradient(180deg, #2b2824, #0f0e0d 75%)" },
+    { cat: "Семья", g: "radial-gradient(ellipse at 30% 30%, #9fbf7a55, transparent 55%), linear-gradient(160deg, #26301f, #10130d 70%)" },
+    { cat: "Мероприятие", g: "radial-gradient(ellipse at 60% 60%, #6a8fd655, transparent 50%), linear-gradient(190deg, #1e2436, #0d0f15 70%)" },
+    { cat: "Свадьба", g: "radial-gradient(ellipse at 40% 25%, #f0d29a66, transparent 55%), linear-gradient(175deg, #463a2a, #16120d 70%)" },
+    { cat: "Love story", g: "radial-gradient(ellipse at 75% 70%, #E8A33D55, transparent 55%), linear-gradient(150deg, #33241a, #110d0a 70%)" },
+    { cat: "Портрет", g: "radial-gradient(ellipse at 30% 40%, #b48a6a55, transparent 50%), linear-gradient(200deg, #2e221c, #0f0c0b 75%)" },
+    { cat: "Семья", g: "radial-gradient(ellipse at 60% 30%, #e0b77a55, transparent 55%), linear-gradient(165deg, #3a3020, #12100b 70%)" }
+  ];
+  var cam = '<svg class="cam" viewBox="0 0 24 24" fill="none" stroke="#EDEAE4" stroke-width="1.5" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L17 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="4"/></svg>';
+  function ph(w) {
+    return '<div class="ph" role="img" aria-label="Фото: ' + w.cat + '" style="--g:' + w.g + '">' + cam + '<span class="ph-label">' + w.cat + '</span></div>';
+  }
+  var grid = document.getElementById("portfolio-grid");
+  grid.innerHTML = works.map(function (w, i) {
+    return '<li class="reveal"><button type="button" data-i="' + i + '" aria-label="Открыть фото: ' + w.cat + '">' + ph(w) + '</button></li>';
+  }).join("");
+
+  // Lightbox
+  var lb = document.getElementById("lightbox"), stage = document.getElementById("lb-stage"), cur = 0, lastFocus;
+  function show(i) {
+    cur = (i + works.length) % works.length;
+    stage.innerHTML = ph(works[cur]) + '<p class="lightbox-caption">' + works[cur].cat + ' · ' + (cur + 1) + ' / ' + works.length + '</p>';
+  }
+  function open(i) { lastFocus = document.activeElement; show(i); lb.classList.add("open"); document.body.style.overflow = "hidden"; document.getElementById("lb-close").focus(); }
+  function close() { lb.classList.remove("open"); document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
+  grid.addEventListener("click", function (e) { var b = e.target.closest("button[data-i]"); if (b) open(+b.dataset.i); });
+  document.getElementById("lb-close").onclick = close;
+  document.getElementById("lb-prev").onclick = function () { show(cur - 1); };
+  document.getElementById("lb-next").onclick = function () { show(cur + 1); };
+  lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(cur - 1);
+    if (e.key === "ArrowRight") show(cur + 1);
+  });
+  var tx = null;
+  lb.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", function (e) {
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+    tx = null;
+  });
+
+  // Sticky header
+  var header = document.getElementById("header");
+  function onScroll() { header.classList.toggle("scrolled", window.scrollY > 10); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  // Burger
+  var burger = document.getElementById("burger"), menu = document.getElementById("mobile-menu");
+  burger.addEventListener("click", function () {
+    var o = menu.classList.toggle("open");
+    burger.setAttribute("aria-expanded", o);
+    burger.setAttribute("aria-label", o ? "Закрыть меню" : "Открыть меню");
+  });
+  menu.addEventListener("click", function (e) { if (e.target.tagName === "A") { menu.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); } });
+
+  // Reveal on scroll
+  var items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    items.forEach(function (el) { io.observe(el); });
+  } else { items.forEach(function (el) { el.classList.add("in"); }); }
+
+  // Phone mask +7 7__ ___ __ __
+  var phone = document.getElementById("f-phone");
+  function formatPhone(v) {
+    var d = v.replace(/\D/g, "");
+    if (d.charAt(0) === "8") d = "7" + d.slice(1);
+    if (d.charAt(0) !== "7") d = "7" + d;
+    d = d.slice(1, 11);
+    var out = "+7";
+    if (d.length) out += " " + d.slice(0, 3);
+    if (d.length > 3) out += " " + d.slice(3, 6);
+    if (d.length > 6) out += " " + d.slice(6, 8);
+    if (d.length > 8) out += " " + d.slice(8, 10);
+    return out;
+  }
+  phone.addEventListener("input", function () { phone.value = formatPhone(phone.value); });
+  phone.addEventListener("focus", function () { if (!phone.value) phone.value = "+7 7"; });
+  phone.addEventListener("blur", function () { if (phone.value.replace(/\D/g, "").length <= 2) phone.value = ""; });
+
+  // Form validation
+  var form = document.getElementById("booking-form");
+  function setInvalid(el, bad) {
+    el.closest(".field").classList.toggle("invalid", bad);
+    el.setAttribute("aria-invalid", bad ? "true" : "false");
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("f-name"), type = document.getElementById("f-type");
+    var bad = [];
+    var nameBad = name.value.trim().length < 2;
+    var phoneBad = !/^7\d{10}$/.test(phone.value.replace(/\D/g, ""));
+    var typeBad = !type.value;
+    setInvalid(name, nameBad); setInvalid(phone, phoneBad); setInvalid(type, typeBad);
+    if (nameBad) bad.push(name); if (phoneBad) bad.push(phone); if (typeBad) bad.push(type);
+    if (bad.length) { bad[0].focus(); return; }
+    // TODO: отправка в Telegram-бот / Formspree
+    form.style.display = "none";
+    document.getElementById("success").classList.add("show");
+  });
+  [document.getElementById("f-name"), phone, document.getElementById("f-type")].forEach(function (el) {
+    el.addEventListener("input", function () { if (el.closest(".field").classList.contains("invalid")) setInvalid(el, false); });
+    el.addEventListener("change", function () { if (el.closest(".field").classList.contains("invalid")) setInvalid(el, false); });
+  });
+
+  // Min date = today
+  var dateIn = document.getElementById("f-date");
+  dateIn.min = new Date().toISOString().split("T")[0];
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
